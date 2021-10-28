@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {"url": "https://raw.githubusercontent.com/sauravrathod/sauravrathod.github.io/master/building_inventory.csv"},
+    "mark": {"type": "bar", "tooltip": true, "cursor":"pointer"},
+    "height": 300,
+    "width": 300,
+    "title": 
+    {
+      "text":"USAGE OF FLOOR PER SQUARE FOOTAGE", 
+      "align":"center",
+      "fontSize": 14,
+      "subtitle": "Square Footage taken as Mean"    
+    },
+    "encoding":
+     {
+        "y": {"field": "Square Footage", "type": "quantitative",  "aggregate": "mean"},
+        "x": {"field": "Usage Description", "type": "nominal"},
+        "color":
+         {"field": "Total Floors", "type": "quantitative",
+         "scale": {"range": ["#675192", "#ca8831"]}
+         }
+      },
+  "config": {"background": "whitesmoke"}
+}
